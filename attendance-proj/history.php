@@ -4,7 +4,6 @@ if (!isset($_SESSION["username"])) {
     header("location:login.php");
     exit();
 }
-
 include 'connect.php';
 
 ?>
@@ -69,7 +68,7 @@ include 'connect.php';
                         $name = $row["name"];
                         $timein = $row["timein"];
                         $timeout = $row["timeout"];
-                        $hoursworked = round((strtotime($timeout) - strtotime($timein)) / 3600);
+                        $hoursworked = round((strtotime($timeout) - strtotime($timein)) / 3600, 2);
                         echo '<tr>
                 <th scope="row">' . $id . '</th>
                 <td>' . $name . '</td>

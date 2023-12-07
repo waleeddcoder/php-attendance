@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 
 try {
     if (isset($_POST["submit"])) {

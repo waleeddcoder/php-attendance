@@ -6,6 +6,8 @@ if (!isset($_SESSION["username"])) {
 }
 
 include 'connect.php';
+date_default_timezone_set('Asia/Karachi');
+
 $name = $_SESSION["username"];
 
 $currentDate = date("Y-m-d");

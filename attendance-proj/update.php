@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 include("connect.php");
 $id = $_GET['editid'];
 $sql = "SELECT * FROM `registration` WHERE id=$id";
